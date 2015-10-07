@@ -3,6 +3,36 @@ layout: default
 title: Raúl Acuña
 ---
 
-<p>You can find me on <a href="https://github.com/reacuna">Github</a>,
-<a href="https://keybase.io/reacuna">Keybase</a> and
-<a href="https://twitter.com/reacuna">Twitter</a>, if thatʼs your thing.</p>
+<p>
+  Developer.
+</p>
+
+{% for post in paginator.posts %}
+  <article>
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <p>
+      <span class="date">{{ post.date | date: '%Y-%m-%d' }}</span>
+    </p>
+    <div class="content">
+      {{ post.content }}
+    </div>
+  </article>
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  Page {{paginator.page}} of {{paginator.total_pages}}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
