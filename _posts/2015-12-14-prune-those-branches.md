@@ -3,8 +3,7 @@ layout: blog
 title: Prune those branches
 ---
 
-Remember to prune old branches that are no longer present in the remote
-repository.
+Remember to prune old branches that are no longer present in the remote repository.
 
 ```
 git fetch --prune
