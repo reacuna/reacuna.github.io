@@ -9,13 +9,7 @@ Remember to prune old branches that are no longer present in the remote reposito
 git fetch --prune
 ```
 
-Also, if you forget how to remove a remote branch:
-
-```
-git branch -r -d ${BRANCH_NAME}
-```
-
-Or, if you learned before the `-r` parameter was added:
+And delete the branch on the remote:
 
 ```
 git push origin :${BRANCH_NAME}
