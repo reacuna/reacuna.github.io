@@ -4,9 +4,9 @@ require 'capistrano/setup'
 
 # Include default deployment tasks
 require 'capistrano/deploy'
+require 'capistrano/rbenv'
 require 'capistrano/bundler'
 require 'capistrano/jekyll'
-require 'capistrano/rbenv'
 
 # Include tasks from other gems included in your Gemfile
 #
