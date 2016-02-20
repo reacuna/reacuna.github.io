@@ -1,2 +1,7 @@
 source 'https://rubygems.org'
-gem 'github-pages'
+gem 'jekyll', '~> 3.1', '>= 3.1.2'
+gem 'jekyll-feed', '~> 0.4', '>= 0.4.0'
+gem 'capistrano', '~> 3.4'
+gem 'capistrano-jekyll', '~> 0.2'
+gem 'capistrano-rbenv', '~> 2.0', '>= 2.0.4'
+gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'

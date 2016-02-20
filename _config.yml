@@ -4,5 +4,11 @@ author: Raúl Acuña
 timezone: America/Santiago
 paginate: 10
 paginate_path: "/blog/page:num/"
+exclude:
+  - config
+  - Capfile
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 gems:
   - jekyll-feed
