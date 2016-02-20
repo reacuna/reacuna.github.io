@@ -40,8 +40,10 @@ set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, File.read('.ruby-version').strip
 
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
-set :rbenv_map_bins, %w{gem bundle ruby jekyll}
+set :rbenv_map_bins, %w{gem bundle ruby}
 set :rbenv_roles, :all # default value
+
+set :bundle_bins, fetch(:bundle_bins, []).push(:jekyll)
 
 # namespace :deploy do
 #
