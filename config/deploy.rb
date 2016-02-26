@@ -39,11 +39,11 @@ set :rbenv_type, :user # or :system, depends on your rbenv setup
 # in case you want to set ruby version from the file:
 set :rbenv_ruby, File.read('.ruby-version').strip
 
-set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
-set :rbenv_map_bins, %w{gem bundle ruby}
-set :rbenv_roles, :all # default value
+# Add jekyll to the commands that need to be exec'ed by rbenv
+set :rbenv_map_bins, fetch(:rbenv_map_bins, []).push('jekyll')
 
-set :bundle_bins, fetch(:bundle_bins, []).push(:jekyll)
+# Add jekyll to the commands that need to be exec'd by bundle
+set :bundle_bins, fetch(:bundle_bins, []).push('jekyll')
 
 # namespace :deploy do
 #

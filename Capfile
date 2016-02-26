@@ -6,8 +6,7 @@ require 'capistrano/setup'
 require 'capistrano/deploy'
 require 'capistrano/rbenv'
 require 'capistrano/bundler'
-# Disable this as it's not working yet
-#require 'capistrano/jekyll'
+require 'capistrano/jekyll'
 
 # Include tasks from other gems included in your Gemfile
 #
