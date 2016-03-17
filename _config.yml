@@ -1,6 +1,7 @@
 name: reacuna.me
 description: Random contemplations of things
 author: Raúl Acuña
+url: https://www.reacuna.me
 timezone: America/Santiago
 paginate: 10
 paginate_path: "/blog/page:num/"
