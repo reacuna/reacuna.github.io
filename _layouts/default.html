@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% feed_meta %}
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/simplex/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/simplex/bootstrap.min.css">
     <link rel="stylesheet" href="/css/site.css">
   </head>
   <body>
@@ -26,12 +26,14 @@
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li{% if page.slug == "about" %} class="active" {% endif %}>
-                  <a href="/about/">About</a>
+                {% for item in site.pages %}
+                {% if item.slug == null %}
+                  {% continue %}
+                {% endif %}
+                <li class="{% if page.slug == item.slug %}active{% endif %}">
+                  <a href="{{item.url}}">{{ item.title }}</a>
                 </li>
-                <li{% if page.slug == "contact" %} class="active" {% endif %}>
-                  <a href="/contact/">Contact</a>
-                </li>
+                {% endfor %}
               </ul>
             </div>
           </div>
@@ -46,7 +48,7 @@
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </body>
 </html>

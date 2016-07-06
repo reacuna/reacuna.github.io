@@ -1,4 +1,19 @@
 GIT
+  remote: git://github.com/jekyll/jekyll.git
+  revision: 51a80b8225df64c17be4e596571a69a6712b4f8f
+  specs:
+    jekyll (3.2.0.pre.beta1)
+      colorator (~> 1.0)
+      jekyll-sass-converter (~> 1.0)
+      jekyll-watch (~> 1.1)
+      kramdown (~> 1.3)
+      liquid (~> 3.0)
+      mercenary (~> 0.3.3)
+      pathutil (~> 0.9)
+      rouge (~> 1.7)
+      safe_yaml (~> 1.0)
+
+GIT
   remote: git://github.com/reacuna/capistrano-jekyll.git
   revision: ea5febe63fb0de849f78be7c8ab1108be0be0c4a
   branch: develop
@@ -24,40 +39,34 @@ GEM
     capistrano-rbenv (2.0.4)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
-    colorator (0.1)
-    ffi (1.9.10)
+    colorator (1.1.0)
+    ffi (1.9.12)
+    forwardable-extended (2.6.0)
     i18n (0.7.0)
-    jekyll (3.1.2)
-      colorator (~> 0.1)
-      jekyll-sass-converter (~> 1.0)
-      jekyll-watch (~> 1.1)
-      kramdown (~> 1.3)
-      liquid (~> 3.0)
-      mercenary (~> 0.3.3)
-      rouge (~> 1.7)
-      safe_yaml (~> 1.0)
     jekyll-feed (0.4.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.4.0)
       sass (~> 3.4)
-    jekyll-watch (1.3.1)
-      listen (~> 3.0)
-    kramdown (1.9.0)
+    jekyll-watch (1.4.0)
+      listen (~> 3.0, < 3.1)
+    kramdown (1.11.1)
     liquid (3.0.6)
-    listen (3.0.6)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9.7)
-    mercenary (0.3.5)
+    listen (3.0.8)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    mercenary (0.3.6)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
+    pathutil (0.14.0)
+      forwardable-extended (~> 2.6)
     rake (11.2.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    rouge (1.10.1)
+    rouge (1.11.1)
     safe_yaml (1.0.4)
-    sass (3.4.21)
+    sass (3.4.22)
     sshkit (1.11.1)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -70,7 +79,7 @@ DEPENDENCIES
   capistrano-bundler (~> 1.1, >= 1.1.4)
   capistrano-jekyll!
   capistrano-rbenv (~> 2.0, >= 2.0.4)
-  jekyll (~> 3.1, >= 3.1.2)
+  jekyll!
   jekyll-feed (~> 0.4, >= 0.4.0)
   jekyll-paginate
 
