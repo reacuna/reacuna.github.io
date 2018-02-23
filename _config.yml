@@ -11,7 +11,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
 markdown: kramdown
